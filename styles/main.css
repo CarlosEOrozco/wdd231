@@ -1,0 +1,78 @@
+/* Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 0.5em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    #menu-toggle {
+        display: none;
+    }
+}
+
+main {
+    padding: 1em;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Course List Styles */
+#course-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    background-color: #f0f0f0;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.completed {
+    background-color: #d4edda;
+}
+
+button {
+    margin-top: 1em;
+    padding: 0.5em;
+}
