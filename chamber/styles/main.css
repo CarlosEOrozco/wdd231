@@ -1,7 +1,6 @@
-/* Basic Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -35,17 +34,34 @@ header nav ul li a:hover {
     background-color: #003f7f;
 }
 
-h1, h2, h3 {
+h1, h2 {
     color: #0056a4;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+.hero {
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
 }
 
-/* Member Cards Styles */
+.cta-button {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.weather, .spotlight {
+    padding: 20px;
+    text-align: center;
+}
+
 .member-card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -64,7 +80,6 @@ h1, h2, h3 {
     margin: 0;
 }
 
-/* Footer Styles */
 footer {
     background-color: #0056a4;
     color: white;
@@ -74,4 +89,3 @@ footer {
     bottom: 0;
     width: 100%;
 }
-

@@ -5,8 +5,12 @@ async function loadMembers() {
         const members = await response.json();
         const memberContainer = document.getElementById('member-container');
 
-        members.forEach(member => {
-            // Create member card element
+        // Filter and shuffle gold/silver members
+        const goldAndSilver = members.filter(member => member.level === "Gold" || member.level === "Silver");
+        const shuffledMembers = goldAndSilver.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+        // Display shuffled members
+        shuffledMembers.forEach(member => {
             const memberCard = document.createElement('div');
             memberCard.classList.add('member-card');
 
@@ -44,11 +48,9 @@ async function loadMembers() {
     }
 }
 
-// Display current year in footer
+// Display current year and last modified date in footer
 document.getElementById('year').textContent = new Date().getFullYear();
-
-// Display last modified date in footer
 document.getElementById('last-modified').textContent = document.lastModified;
 
-// Call the function to load members on page load
+// Load members when page loads
 loadMembers();

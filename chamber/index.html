@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Argentina Chamber of Commerce">
+    <meta name="author" content="Carlos Orozco">
+
+    <meta property="og:title" content="Argentina Chamber of Commerce">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Course homepage for WDD 231">
+    <meta property="og:image" content="https://camcomcba.com.ar/app/images/logo.png">
+    <meta property="og:url" content="https://camcomcba.com.ar/">
+
+    <title>Argentina Chamber of Commerce</title>
+
+    <!-- Google Fonts & CSS Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="icon" href="images/favicon.ico">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/forecast.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to the Argentina Chamber of Commerce</h1>
+            <a href="join.html" class="cta-button">Join Now</a>
+        </div>
+    </section>
+
+    <!-- Weather -->
+    <section class="weather">
+        <h2>Current Weather</h2>
+        <div id="weather-container">
+            <p id="current-temp"></p>
+            <figure>
+                <img id="weather-icon" alt="weather icon">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Company Spotlight -->
+    <section class="spotlight">
+        <h2>Spotlight Members</h2>
+        <div id="member-container"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Argentina Chamber of Commerce</p>
+        <p>Last updated: <span id="last-modified"></span></p>
+    </footer>
+
+    <!-- JavaScript for Weather and Members -->
+    <script src="scripts/forecast.js"></script>
+</body>
+</html>
