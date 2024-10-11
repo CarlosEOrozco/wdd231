@@ -11,6 +11,12 @@ header {
     padding: 10px 0;
 }
 
+header h1{
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
 header nav ul {
     list-style-type: none;
     margin: 0;
@@ -108,6 +114,7 @@ footer {
     max-width: 800px;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
+
 }
 
 /* Form Labels */
