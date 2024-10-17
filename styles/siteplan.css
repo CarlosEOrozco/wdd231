@@ -1,0 +1,59 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: Georgia, serif; /* Body font */
+    background-color: #F3F3F3; /* Secondary color */
+    color: #333; /* Dark gray text color for readability */
+    line-height: 1.6; /* Improved line height for readability */
+    padding: 20px; /* Padding around the content */
+}
+
+/* Header styles */
+header {
+    background-color: #007A33; /* Primary color */
+    color: white; /* White text for contrast */
+    padding: 20px; /* Padding inside the header */
+    text-align: center; /* Centered text */
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2.5em; /* Large font size for main heading */
+}
+
+h2 {
+    font-size: 2em; /* Slightly smaller for subheadings */
+    margin-top: 20px; /* Space above the subheading */
+}
+
+/* List styles */
+ul {
+    margin-top: 10px; /* Space above the list */
+}
+
+/* Footer styles */
+footer {
+    text-align: center; /* Centered footer text */
+    margin-top: 30px; /* Space above the footer */
+    font-size: 0.9em; /* Slightly smaller font size for footer */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 2em; /* Adjust heading size */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Adjust subheading size */
+    }
+}
