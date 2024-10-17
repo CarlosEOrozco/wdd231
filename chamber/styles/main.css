@@ -234,6 +234,74 @@ footer {
     cursor: pointer;
 }
 
+
+
+/* Grid Layout for Discover Page */
+.discover-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sidebar {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid figure {
+    margin: 0;
+    position: relative;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.lazy {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.lazy-loaded {
+    opacity: 1;
+}
+/* End of dicover style */
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .discover-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+
+
+
+
+
+
 /* Responsive Layout for Membership Cards */
 @media screen and (min-width: 768px) {
     .membership-cards {
@@ -246,3 +314,5 @@ footer {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+

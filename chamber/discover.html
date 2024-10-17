@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the Argentina Chamber of Commerce">
+    <meta name="author" content="Carlos Orozco">
+    <title>Discover - Argentina Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/discover.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Content -->
+    <main class="discover-grid">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="visitor-info" id="visitor-info">
+                <!-- Visitor message will be inserted here -->
+            </div>
+            <div class="additional-info">
+                <h3>Chamber Statistics</h3>
+                <p>Members: 500+</p>
+                <p>Events hosted yearly: 100+</p>
+                <!-- Add other information as needed -->
+            </div>
+        </aside>
+
+        <!-- Main Content: Image Gallery -->
+        <section class="gallery">
+            <h2>Discover Local Attractions</h2>
+            <div class="gallery-grid">
+                <figure>
+                    <img data-src="images\chamber2.jpg" alt="Attraction 1" class="lazy">
+                    <figcaption>Attraction 1</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images\chamber1.jfif" alt="Attraction 2" class="lazy">
+                    <figcaption>Attraction 2</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images\chamber3.jpg" alt="Attraction 3" class="lazy">
+                    <figcaption>Attraction 3</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images\chamber4.jfif" alt="Attraction 4" class="lazy">
+                    <figcaption>Attraction 4</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images\chamber5.jpg" alt="Attraction 5" class="lazy">
+                    <figcaption>Attraction 5</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images\chamber6.jpg" alt="Attraction 6" class="lazy">
+                    <figcaption>Attraction 6</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Argentina Chamber of Commerce</p>
+        <p>Last updated: <span id="last-modified"></span></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/discover.js"></script>
+</body>
+</html>
