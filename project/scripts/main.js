@@ -1,10 +1,9 @@
-const apiKey = 'd81c0010b9184ff3970de34048e71ef5'; // Tu API Key
-const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+const apiKey = 'd81c0010b9184ff3970de34048e71ef5'; // Asegúrate de que tu API Key es válida
 const apiUrl = 'https://api.football-data.org/v4/competitions/PL/standings'; // URL de la API
 
 async function fetchPremierLeagueStandings() {
     try {
-        const response = await fetch(proxyUrl + apiUrl, {
+        const response = await fetch(apiUrl, {
             headers: {
                 'X-Auth-Token': apiKey
             }
@@ -33,4 +32,3 @@ async function fetchPremierLeagueStandings() {
 }
 
 document.addEventListener('DOMContentLoaded', fetchPremierLeagueStandings);
-
