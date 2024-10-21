@@ -1,34 +1,38 @@
 const apiKey = 'd81c0010b9184ff3970de34048e71ef5';
-const teamId = 86; // Reemplaza con el ID del equipo que quieras (por ejemplo, 86 para Real Madrid)
-const teamMatchesURL = `https://api.football-data.org/v4/teams/${teamId}/matches`;
 
-function fetchTeamMatches() {
-    fetch(teamMatchesURL, {
-        headers: { 'X-Auth-Token': apiKey }
-    })
-    .then(response => response.json())
-    .then(data => {
-        const matches = data.matches;
-        let matchesHTML = '';
+async function fetchPremierLeagueStandings() {
+    const apiUrl = 'https://api.football-data.org/v4/competitions/PL/standings'; // URL de la API
 
-        if (matches.length === 0) {
-            matchesHTML = '<p>No matches found for this team.</p>';
-        } else {
-            matches.forEach(match => {
-                matchesHTML += `
-                    <div class="match-card">
-                        <h5>${match.homeTeam.name} vs ${match.awayTeam.name}</h5>
-                        <p>Kick-off: ${new Date(match.date).toLocaleString()}</p>
-                        <p>Status: ${match.status}</p>
-                    </div>
-                `;
-            });
+    try {
+        const response = await fetch(apiUrl, {
+            headers: {
+                'X-Auth-Token': apiKey
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error('Error fetching standings: ' + response.statusText);
         }
 
-        document.getElementById('team-matches').innerHTML = matchesHTML; // Asegúrate de tener un div con este ID
-    })
-    .catch(error => console.error('Error fetching team matches:', error));
+        const data = await response.json();
+        console.log(data); // Verifica que obtienes los datos
+
+        // Aquí puedes agregar lógica para mostrar la tabla en el HTML
+        const standingsDiv = document.getElementById('standings');
+        data.standings[0].table.forEach(team => {
+            const teamRow = document.createElement('div');
+            teamRow.innerHTML = `
+                <h3>${team.position}. ${team.team.name} - ${team.points} puntos</h3>
+                <p>J: ${team.playedGames} | G: ${team.won} | E: ${team.draw} | P: ${team.lost}</p>
+            `;
+            standingsDiv.appendChild(teamRow);
+        });
+
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-document.addEventListener('DOMContentLoaded', fetchTeamMatches);
+// Asegúrate de que se llama a esta función al cargar la página
+document.addEventListener('DOMContentLoaded', fetchPremierLeagueStandings);
 
