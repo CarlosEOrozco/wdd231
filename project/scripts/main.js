@@ -1,10 +1,10 @@
-const apiKey = 'd81c0010b9184ff3970de34048e71ef5';
+const apiKey = 'd81c0010b9184ff3970de34048e71ef5'; // Tu API Key
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+const apiUrl = 'https://api.football-data.org/v4/competitions/PL/standings'; // URL de la API
 
 async function fetchPremierLeagueStandings() {
-    const apiUrl = 'https://api.football-data.org/v4/competitions/PL/standings'; // URL de la API
-
     try {
-        const response = await fetch(apiUrl, {
+        const response = await fetch(proxyUrl + apiUrl, {
             headers: {
                 'X-Auth-Token': apiKey
             }
@@ -17,7 +17,6 @@ async function fetchPremierLeagueStandings() {
         const data = await response.json();
         console.log(data); // Verifica que obtienes los datos
 
-        // Aquí puedes agregar lógica para mostrar la tabla en el HTML
         const standingsDiv = document.getElementById('standings');
         data.standings[0].table.forEach(team => {
             const teamRow = document.createElement('div');
@@ -33,6 +32,5 @@ async function fetchPremierLeagueStandings() {
     }
 }
 
-// Asegúrate de que se llama a esta función al cargar la página
 document.addEventListener('DOMContentLoaded', fetchPremierLeagueStandings);
 
