@@ -1,9 +1,10 @@
-const apiKey = 'd81c0010b9184ff3970de34048e71ef5'; // Asegúrate de que tu API Key es válida
-const apiUrl = 'https://api.football-data.org/v4/competitions/PL/standings'; // URL de la API
+const apiKey = 'd81c0010b9184ff3970de34048e71ef5';
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // Proxy de CORS
+const apiUrl = 'https://api.football-data.org/v4/competitions/PL/standings';
 
 async function fetchPremierLeagueStandings() {
     try {
-        const response = await fetch(apiUrl, {
+        const response = await fetch(proxyUrl + apiUrl, {
             headers: {
                 'X-Auth-Token': apiKey
             }
@@ -14,10 +15,10 @@ async function fetchPremierLeagueStandings() {
         }
 
         const data = await response.json();
-        console.log(data); // Verifica que obtienes los datos
+        console.log(data);
 
         const standingsTableBody = document.getElementById('standings');
-        standingsTableBody.innerHTML = ''; // Limpiar contenido previo
+        standingsTableBody.innerHTML = '';
 
         data.standings[0].table.forEach(team => {
             const teamRow = document.createElement('tr');
@@ -38,5 +39,4 @@ async function fetchPremierLeagueStandings() {
     }
 }
 
-// Asegúrate de que se llama a esta función al cargar la página
 document.addEventListener('DOMContentLoaded', fetchPremierLeagueStandings);
