@@ -16,14 +16,21 @@ async function fetchPremierLeagueStandings() {
         const data = await response.json();
         console.log(data); // Verifica que obtienes los datos
 
-        const standingsDiv = document.getElementById('standings');
+        const standingsTableBody = document.getElementById('standings');
+        standingsTableBody.innerHTML = ''; // Limpiar contenido previo
+
         data.standings[0].table.forEach(team => {
-            const teamRow = document.createElement('div');
+            const teamRow = document.createElement('tr');
             teamRow.innerHTML = `
-                <h3>${team.position}. ${team.team.name} - ${team.points} puntos</h3>
-                <p>J: ${team.playedGames} | G: ${team.won} | E: ${team.draw} | P: ${team.lost}</p>
+                <td>${team.position}</td>
+                <td>${team.team.name}</td>
+                <td>${team.playedGames}</td>
+                <td>${team.won}</td>
+                <td>${team.draw}</td>
+                <td>${team.lost}</td>
+                <td>${team.points}</td>
             `;
-            standingsDiv.appendChild(teamRow);
+            standingsTableBody.appendChild(teamRow);
         });
 
     } catch (error) {
@@ -31,4 +38,5 @@ async function fetchPremierLeagueStandings() {
     }
 }
 
+// Asegúrate de que se llama a esta función al cargar la página
 document.addEventListener('DOMContentLoaded', fetchPremierLeagueStandings);
