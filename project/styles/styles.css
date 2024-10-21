@@ -1,0 +1,65 @@
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h5 {
+    font-weight: bold;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+/* Hero Section */
+header {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Lazy load images */
+.lazyload {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.lazyload.lazyloaded {
+    opacity: 1;
+}
+
+/* Card styling */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+}
+
+footer a {
+    color: #ffc107;
+}
+
+footer a:hover {
+    color: #e0a800;
+}
+
