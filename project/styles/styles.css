@@ -132,3 +132,31 @@ h2 {
 .navbar-toggler {
     margin-right: 15px;
 }
+
+
+/* Teams page */
+#teams-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .team-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .team-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  .team-box h3 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
