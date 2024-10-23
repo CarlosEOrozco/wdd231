@@ -16,7 +16,7 @@ h1, h5 {
 
 /* Hero Section */
 header {
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(90deg, rgba(0, 36, 11, 0.5) 0%, rgba(9, 9, 121, 0.25) 35%, rgba(0, 212, 255, 1) 100%);
     color: white;
 }
 
@@ -73,3 +73,36 @@ footer a:hover {
     vertical-align: middle;
 }
 
+
+body {
+    background-color: #f8f9fa; /* Color de fondo claro */
+}
+
+.container {
+    margin-top: 20px;
+    background-color: #ffffff; /* Fondo blanco para las secciones */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+}
+
+h2 {
+    color: #007bff; /* Color azul para los títulos */
+}
+
+
+.navbar-nav .nav-link {
+    margin-left: 15px; /* Margen a la izquierda */
+    color: #007bff; /* Color azulado */
+    padding: 10px 15px; /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+    transition: background-color 0.3s; /* Transición suave para el efecto hover */
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(0, 123, 255, 0.2); /* Efecto de oscurecimiento al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados para el efecto hover */
+}
+
+.navbar-toggler {
+    margin-right: 15px;
+}
