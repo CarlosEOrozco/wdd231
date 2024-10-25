@@ -15,44 +15,39 @@ h1, h5 {
 }
 
 /* Hero Section */
-/* Hero Section */
 header {
     background: linear-gradient(90deg, rgba(0, 36, 11, 0.5) 0%, rgba(9, 9, 121, 0.25) 35%, rgba(0, 212, 255, 1) 100%);
     color: white;
     text-align: center;
-    padding: 20px; /* Espaciado interno */
+    padding: 20px; 
 }
 
 header img {
-    width: 20%; /* Limita el ancho máximo de la imagen */
-    height: auto; /* Mantiene la proporción */
+    width: 20%; 
+    height: auto; 
     min-width: 200px;
 }
 
 header h1 {
     font-size: 2.5rem;
-    margin: 10px 0; /* Espaciado entre el logo y el texto */
+    margin: 10px 0; 
 }
 
 header p {
     font-size: 1.2rem;
-    margin: 10px 0; /* Espaciado entre el h1 y el párrafo */
+    margin: 10px 0; 
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem; /* Tamaño más pequeño en pantallas más pequeñas */
+        font-size: 2rem; 
     }
 
     header p {
-        font-size: 1rem; /* Tamaño más pequeño para el párrafo */
+        font-size: 1rem; 
     }
 }
-
-
-
-
 
 /* Lazy load images */
 .lazyload {
@@ -101,32 +96,32 @@ footer a:hover {
 
 
 body {
-    background-color: #f8f9fa; /* Color de fondo claro */
+    background-color: #f8f9fa; 
 }
 
 .container {
     margin-top: 20px;
-    background-color: #ffffff; /* Fondo blanco para las secciones */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px; /* Espaciado interno */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 h2 {
-    color: #007bff; /* Color azul para los títulos */
+    color: #007bff; 
 }
 
 
 .navbar-nav .nav-link {
-    margin-left: 15px; /* Margen a la izquierda */
-    color: #007bff; /* Color azulado */
-    padding: 10px 15px; /* Espaciado interno (arriba/abajo, izquierda/derecha) */
-    transition: background-color 0.3s; /* Transición suave para el efecto hover */
+    margin-left: 15px; 
+    color: #007bff; 
+    padding: 10px 15px; 
+    transition: background-color 0.3s; /
 }
 
 .navbar-nav .nav-link:hover {
-    background-color: rgba(0, 123, 255, 0.2); /* Efecto de oscurecimiento al pasar el mouse */
-    border-radius: 5px; /* Bordes redondeados para el efecto hover */
+    background-color: rgba(0, 123, 255, 0.2); 
+    border-radius: 5px; 
 }
 
 .navbar-toggler {
@@ -140,23 +135,23 @@ h2 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-  }
-  
-  .team-box {
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  .team-box img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-  }
-  
-  .team-box h3 {
-    margin-top: 10px;
-    font-size: 18px;
-  }
+}
+
+.team-box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.team-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.team-box h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}

@@ -2,6 +2,8 @@ const apiKey = 'd81c0010b9184ff3970de34048e71ef5';
 const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // Proxy de CORS
 const apiUrl = 'https://api.football-data.org/v4/competitions/PL/standings';
 
+
+//Table script
 async function fetchPremierLeagueStandings() {
     try {
         const response = await fetch(proxyUrl + apiUrl, {
@@ -39,6 +41,8 @@ async function fetchPremierLeagueStandings() {
     }
 }
 
+
+//Next matches script
 const apiUrlMatches = 'https://api.football-data.org/v4/competitions/PL/matches?status=SCHEDULED';
 
 async function fetchPremierLeagueSchedules() {
@@ -59,8 +63,8 @@ async function fetchPremierLeagueSchedules() {
         const matchesContainer = document.getElementById('team-matches');
         matchesContainer.innerHTML = '';
 
-        // Filtrar y mostrar solo los próximos 10 partidos
-        const upcomingMatches = data.matches.slice(0, 10); // Limitar a 10 partidos
+        // Filter and show the next 10 matches
+        const upcomingMatches = data.matches.slice(0, 10); // Limit
 
         upcomingMatches.forEach(match => {
             const matchCard = document.createElement('div');
@@ -87,7 +91,7 @@ async function fetchPremierLeagueSchedules() {
     }
 }
 
-
+//Scores script
 const apiUrlScores = 'https://api.football-data.org/v4/competitions/PL/matches?status=FINISHED';
 async function fetchPremierLeagueScores() {
     try {
@@ -107,8 +111,8 @@ async function fetchPremierLeagueScores() {
         const scoresContainer = document.getElementById('team-scores');
         scoresContainer.innerHTML = '';
 
-        // Filtrar y mostrar solo los últimos 10 partidos finalizados
-        const finishedMatches = data.matches.slice(-10); // Últimos 10 partidos
+        // Filter and show the last 10 matches
+        const finishedMatches = data.matches.slice(-10); // last 10
 
         finishedMatches.forEach(match => {
             const scoreCard = document.createElement('div');
@@ -117,8 +121,8 @@ async function fetchPremierLeagueScores() {
             const matchDate = new Date(match.utcDate).toLocaleString();
             const homeTeam = match.homeTeam.name;
             const awayTeam = match.awayTeam.name;
-            const homeScore = match.score.fullTime.home;  // Cambiado a 'home'
-            const awayScore = match.score.fullTime.away;  // Cambiado a 'away'
+            const homeScore = match.score.fullTime.home;  
+            const awayScore = match.score.fullTime.away;  
 
             scoreCard.innerHTML = `
                 <div class="card">
